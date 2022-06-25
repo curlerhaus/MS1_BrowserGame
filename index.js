@@ -7,3 +7,19 @@ document.getElementById("entername").onclick =function(){
     namestr=document.getElementById("name").value;
     document.getElementById("display").innerHTML="Hi"+" "+namestr+"!"+" "+"Let play some curling trivia!";
   }}
+
+//   rocks smashing into
+
+function newImage(url){
+    let image = document.createElement('img')
+    image.src = url
+    image.style.position = 'absolute'
+    document.body.append(image)
+    return image
+}
+
+function rockIntro () {
+    let redRock = newImage('./images/redrock.png')
+    let yellowRock = newImage('./images/yellowrock.png')
+    $('./images/redrock.png').animate({right: '=30px'}, 2000)
+}

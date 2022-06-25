@@ -8,8 +8,8 @@ ask users questions to test their knowledge about curling.
 at the end give people a link to their local curling club.
 
 
-##H1 tag
+## H1 tag
 
-###game2 tag
+### game2 tag
 - bullet points.
 - bullet points

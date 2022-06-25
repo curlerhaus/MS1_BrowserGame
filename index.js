@@ -8,7 +8,7 @@ document.getElementById("entername").onclick =function(){
     document.getElementById("display").innerHTML="Hi"+" "+namestr+"!"+" "+"Let play some curling trivia!";
   }}
 
-//   rocks smashing into
+//   rocks smashing intro
 
 function newImage(url){
     let image = document.createElement('img')
@@ -23,3 +23,8 @@ function rockIntro () {
     let yellowRock = newImage('./images/yellowrock.png')
     $('./images/redrock.png').animate({right: '=30px'}, 2000)
 }
+
+// start game function
+// ask question function
+// keep score function
+// 

@@ -33,3 +33,7 @@ h1, h2 {
 .btn:hover {
     border-color: red;
 }
+
+#playbutton {
+    text-align: center;
+}

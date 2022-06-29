@@ -1,55 +1,23 @@
-
-
-// // inner html push h2 tag welcoming user.
-// function welcomeUser() {
-// document.getElementById("entername").onclick =function(){
-//     if(typeof entername == 'undefined')
-//     alert('Please input a user name.')
-//     else {
-//     var namestr;
-//     namestr=document.getElementById("name").value;
-//     document.getElementById("display").innerHTML="Hi"+" "+namestr+"!"+" "+"Let play some curling trivia!";
-// }
-//   }}
-
 const arrayQuestions = [
-    {quesiton : 'How much does a typical curling stone weigh?', answers : {a: '50lbs', b: '45bls',c: '30lbs',d: '42lbs'}, correctAnswer : 'd'},
-    {question : 'What is the scoring circle called?', answers : {a: 'House',b: 'Target',c: 'Scoring Zone',d: 'Pancake'}, correctAnswer : 'a'},
-    {question : 'In what year did the U.S. Mens Olympic curling team win the gold medal?', answers : {a: '2010',b: '2014',c: '2018',d: '2022'}, correctAnswer : 'c'},
+    {question : 'How much does a typical curling stone weigh?', choices : ['50lbs', '45bls', '30lbs', '42lbs'], correctAnswer : 3},
+    {question : 'What is the scoring circle called?', choices : ['House', 'Target', 'Scoring Zone', 'Pancake'], correctAnswer : 0},
+    {question : 'In what year did the U.S. Mens Olympic curling team win the gold medal?', choices : ['2010', '2014', '2018', '2022'], correctAnswer : 2},
 
 ]
 
-const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
-const submitButton = document.getElementById('submit');
 
 function buildQuiz(){
-    const output = [];
-    arrayQuestions.forEach((currentQuestion, questionNumber) => {
-        const answers = [];
-        for(letter in currentQuestion.answers){
-            answers.push(
-                `<label>
-                <input type = 'radio' name = 'question${questionNumber}' value ='${letter}'>
-                ${letter} :
-                ${currentQuestion.answers[letter]}
-                </label>`
-            );
-        }
-        output.push(
-            `<div class = 'question'> ${currentQuestion.question}</div>
-            <div class = 'answers'> ${answers.join('')} </div>`
-        );
-    });
-    quizContainer.innerHTML = output.join('');
+    arrayQuestions.forEach(element => console.log(element.question));
+    arrayQuestions.forEach(display)
+    function display(item) {
+        document.getElementById('question').innerHTML += item.question + '<br>'
+    }
+    
 }
 
-function showRestults(){
-
-}
-
-buildQuiz();
-
-submitButton.addEventListener('click', showResults);
+    
 
 
+// showRestults(){
+
+// }

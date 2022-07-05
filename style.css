@@ -4,6 +4,9 @@
   .topnav {
     overflow: hidden;
     background-color: rgb(74, 51, 249);
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
   
   .topnav a {
@@ -24,10 +27,14 @@
   .topnav .icon {
     display: none;
   }
-  
 
-
-
+/* html pages */
+.main {
+    padding: 16px;
+    margin-top: 50px;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(./images/curlingBackground.jpg);
+    margin-bottom: 50px;
+}
 
 
 body #container {
@@ -45,14 +52,6 @@ h1, h2 {
     text-align: center;
 }
 
-#userName {
-    text-align: center;
-}
-
-#rock {
-    width: 25%;
-}
-
 .box {
     width: 800px;
     max-width: 80%;
@@ -60,14 +59,6 @@ h1, h2 {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-}
-
-.btn:hover {
-    border-color: red;
-}
-
-#playbutton {
-    text-align: center;
 }
 
 /* Trivia Page  */
@@ -83,10 +74,9 @@ h1, h2 {
 }
 
 .nextButton{
-    border-radius: 6px;
+    border-radius: 10px;
     width: 150px;
     height: 40px;
-    text-align: center;
     text-align: center;
     color: #f2f2f2;
     font-weight: bold;
@@ -107,17 +97,35 @@ h1, h2 {
 }
 
 .quizMessage{
-    background-color: peachpuff;
-    border-radius: 6px;
+    background-color: #f2f2f2;
+    border-radius: 2px;
     width: 30%;
     margin: auto;
     text-align: center;
-    padding: 2px;
+    padding: 8px;
     color: red;
+    font-weight: bold;
 }
 
 ul.choicelist {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
   }
+
+li {
+    color: #f2f2f2;
+    font-size: larger;
+}
+
+.result {
+    color: #f2f2f2;
+    text-align: center;
+    font-weight: larger;
+}
+
+#worldCurling {
+    background-color: red;
+}
+
+#testKnowledge {
+    background-color: red;
+}

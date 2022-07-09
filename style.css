@@ -1,6 +1,5 @@
 /* Top Navigation */
 
-  
   .topnav {
     overflow: hidden;
     background-color: rgb(74, 51, 249);
@@ -20,13 +19,10 @@
   }
   
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: #f2f2f2;
     color: black;
   }
   
-  .topnav .icon {
-    display: none;
-  }
 
 /* html pages */
 .main {
@@ -52,30 +48,31 @@ h1, h2 {
     text-align: center;
 }
 
-.box {
-    width: 800px;
-    max-width: 80%;
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px 2px;
+#worldCurling {
+    background-color: rgba(255, 45, 45, 0.717);
+    padding: 20px;
 }
+
+#testKnowledge {
+    background-color: rgba(255, 45, 45, 0.717);
+}
+
 
 /* Trivia Page  */
 .quizContainer {
     background-color: rgb(74, 51, 249);
     color: #f2f2f2;
-    border-radius: 8px;
-    width: 75%;
+    border-radius: 20px;
+    width: 80%;
     margin: auto;
-    margin-top: 190px;
+    margin-top: 100px;
     padding-top: 5px;
     position: relative;
 }
 
 .nextButton{
     border-radius: 10px;
-    width: 150px;
+    width: 140px;
     height: 40px;
     text-align: center;
     color: #f2f2f2;
@@ -86,11 +83,11 @@ h1, h2 {
 }
 
 .question{
-    font-size: 2em;
+    font-size: 40px;
     width: 90%;
     height: auto;
     margin: auto;
-    border-radius: 6px;
+    border-radius: 10px;
     background-color: rgb(57, 200, 71);
     text-align: center;
     color: #f2f2f2;
@@ -98,7 +95,7 @@ h1, h2 {
 
 .quizMessage{
     background-color: #f2f2f2;
-    border-radius: 2px;
+    border-radius: 10px;
     width: 30%;
     margin: auto;
     text-align: center;
@@ -120,12 +117,8 @@ li {
     color: #f2f2f2;
     text-align: center;
     font-weight: larger;
-}
+} 
 
-#worldCurling {
-    background-color: red;
-}
-
-#testKnowledge {
-    background-color: red;
+ .result a {
+    color: #f2f2f2;
 }

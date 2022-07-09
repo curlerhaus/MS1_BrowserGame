@@ -1,15 +1,6 @@
 # MS1_BrowserGame
 Software Development Course Milestone 1 project. Browser Game.
 
+### Curling Trivia
+Start out on the home page to view the links to learn the ins and out turns of curling. Play the trivia game to test your knowledge then follow the link to a map to find a curling club nearest you. 
 
-Basic curling trivia game.
-
-ask users questions to test their knowledge about curling. 
-at the end give people a link to their local curling club.
-
-
-## H1 tag
-
-### game2 tag
-- bullet points.
-- bullet points

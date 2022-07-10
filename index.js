@@ -6,23 +6,23 @@ const arrayQuestions = [
     {question : 'From back board to back board how long is a curling sheet?', choices : [' 150ft', ' 130ft', ' 200ft', ' 100ft'], correctAnswer : 0},
 ]
 
-var currentQuestion = 0;
-var correctAnswers = 0;
-var quizDone = false;
+let currentQuestion = 0;
+let correctAnswers = 0;
+let quizDone = false;
 
 
 // loads quiz on page load
 window.addEventListener('DOMContentLoaded', function(e){
     displayCurrentQuestion();
 
-    var quizMessage = document.querySelector('.quizMessage');
+    let quizMessage = document.querySelector('.quizMessage');
 
         quizMessage.style.display = 'none';
 
     document.querySelector('.nextButton').addEventListener('click', function(){
         
         if(quizDone === false){
-            var radioBtnsChecked = document.querySelector('input[type=radio]:checked');
+            let radioBtnsChecked = document.querySelector('input[type=radio]:checked');
             //if not checked make a selection
             if (radioBtnsChecked === null){
                 quizMessage.innerText = 'Please select an answer';
@@ -56,10 +56,10 @@ window.addEventListener('DOMContentLoaded', function(e){
 
 function displayCurrentQuestion(){
 
-    var question = arrayQuestions[currentQuestion].question;
-    var questionClass = document.querySelector('.quizContainer > .question');
-    var choiceList = document.querySelector('.quizContainer > .choiceList');
-    var numChoices = arrayQuestions[currentQuestion].choices.length;
+    let question = arrayQuestions[currentQuestion].question;
+    let questionClass = document.querySelector('.question');
+    let choiceList = document.querySelector('.choiceList');
+    let numChoices = arrayQuestions[currentQuestion].choices.length;
 
     //Set the questionClass text to the current question
     questionClass.innerText = question;
@@ -68,10 +68,10 @@ function displayCurrentQuestion(){
     choiceList.innerHTML = '';
 
     // iterates through choice list and puts those options to a list
-    var choice;
+    let choice;
     for (i = 0; i < numChoices; i++){
         choice = arrayQuestions[currentQuestion].choices[i];
-        var li = document.createElement('li');
+        let li = document.createElement('li');
             li.innerHTML = '<li><input type="radio" value="' + i + '" name="dynradio" />' + choice + '</li>'
         choiceList.appendChild(li);
     }
@@ -81,8 +81,8 @@ function displayCurrentQuestion(){
 function displayScore(){
     const percentScored = correctAnswers / arrayQuestions.length * 100
     const displayPercent = percentScored.toFixed(0);
-    document.querySelector('.quizContainer > .result').innerHTML = "Wasn't that a lot of fun?! You scored: " + displayPercent + '%' + "<br>Ready to try curling! Follow <a href='https://www.usacurling.org/find-a-club' target='_blank'>this link</a> to find a club near you!";
-    document.querySelector('.quizContainer > .result').style.display = '';
+    document.querySelector('.result').innerHTML = "Wasn't that a lot of fun?! You scored: " + displayPercent + '%' + "<br>Ready to try curling! Follow <a href='https://www.usacurling.org/find-a-club' target='_blank'>this link</a> to find a club near you!";
+    document.querySelector('.result').style.display = '';
 
 }
 
